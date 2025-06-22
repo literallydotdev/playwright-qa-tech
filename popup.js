@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     popup.innerHTML = `
       <div class="popup-content">
         <div class="popup-icon">🎯</div>
-        <h3 class="popup-title">Welcome to QA Testing Platform</h3>
+        <h3 class="popup-title">Welcome to Playwright vs AI Testing</h3>
         <p>This is a test popup to verify modal interactions and user experience testing capabilities.</p>
         <button class="close-btn">Continue Testing</button>
       </div>
