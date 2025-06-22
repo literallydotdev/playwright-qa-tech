@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inner iframe Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button class="submit">Click Me!</button>
+  <script>
+    document.querySelector('.submit').addEventListener('click', () => {
+      alert('Button inside iframe clicked!');
+    });
+  </script>
+</body>
+</html>

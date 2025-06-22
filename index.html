@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QA Testing Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>QA Testing Demo</h1>
+
+  <section>
+    <h2>Nested iframe Test</h2>
+    <iframe src="iframe-page.html" width="600" height="200" title="Nested iframe"></iframe>
+  </section>
+
+  <section>
+    <h2>Embedded Google Maps Test</h2>
+    <iframe
+      width="600"
+      height="450"
+      style="border:0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Space+Needle,Seattle+WA">
+    </iframe>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
