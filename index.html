@@ -1,31 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>QA Testing Demo</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>QA Testing Demo</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QA Testing Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-content">
+          <h1 class="title">QA Testing Platform</h1>
+          <p class="subtitle">
+            Professional testing environment for modern web applications
+          </p>
+        </div>
+      </header>
 
-  <section>
-    <h2>Nested iframe Test</h2>
-    <iframe src="iframe-page.html" width="600" height="200" title="Nested iframe"></iframe>
-  </section>
+      <main class="main-content">
+        <div class="test-grid">
+          <section class="test-card">
+            <div class="card-header">
+              <h2 class="card-title">Nested iframe Test</h2>
+              <p class="card-description">
+                Test interactions within nested iframe elements
+              </p>
+            </div>
+            <div class="card-content">
+              <iframe
+                src="iframe-page.html"
+                width="100%"
+                height="200"
+                title="Nested iframe test environment"
+                class="test-iframe"
+              ></iframe>
+            </div>
+          </section>
 
-  <section>
-    <h2>Embedded Google Maps Test</h2>
-    <iframe
-      width="600"
-      height="450"
-      style="border:0"
-      loading="lazy"
-      allowfullscreen
-      referrerpolicy="no-referrer-when-downgrade"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD7BTAg7rzTAMNKMDGMWjBa-IGxKMmlrdk&q=Space+Needle,Seattle+WA">
-    </iframe>
-  </section>
+          <section class="test-card">
+            <div class="card-header">
+              <h2 class="card-title">Embedded Maps Test</h2>
+              <p class="card-description">
+                Test external iframe integrations with third-party services
+              </p>
+            </div>
+            <div class="card-content">
+              <iframe
+                width="100%"
+                height="450"
+                style="border: 0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD7BTAg7rzTAMNKMDGMWjBa-IGxKMmlrdk&q=Space+Needle,Seattle+WA"
+                title="Google Maps integration test"
+                class="test-iframe"
+              >
+              </iframe>
+            </div>
+          </section>
+        </div>
+      </main>
 
-  <script src="popup.js"></script>
-</body>
+      <footer class="footer">
+        <p>
+          &copy; 2024 QA Testing Platform. Built for professional testing
+          environments.
+        </p>
+      </footer>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
 </html>

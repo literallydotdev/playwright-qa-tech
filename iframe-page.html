@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Inner iframe Page</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <button class="submit">Click Me!</button>
-  <script>
-    document.querySelector('.submit').addEventListener('click', () => {
-      alert('Button inside iframe clicked!');
-    });
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Environment</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="iframe-container">
+      <div class="iframe-content">
+        <h3 class="iframe-title">Interactive Test Element</h3>
+        <p class="iframe-description">
+          Click the button below to test iframe interactions
+        </p>
+        <button class="submit">Test Interaction</button>
+      </div>
+    </div>
+
+    <style>
+      .iframe-container {
+        padding: var(--spacing-6);
+        background: var(--color-white);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .iframe-content {
+        text-align: center;
+        max-width: 400px;
+      }
+
+      .iframe-title {
+        font-size: var(--font-size-xl);
+        font-weight: 600;
+        color: var(--color-gray-900);
+        margin-bottom: var(--spacing-3);
+        letter-spacing: -0.025em;
+      }
+
+      .iframe-description {
+        color: var(--color-gray-600);
+        margin-bottom: var(--spacing-6);
+        line-height: 1.5;
+      }
+    </style>
+
+    <script>
+      document.querySelector('.submit').addEventListener('click', () => {
+        alert('Button inside iframe clicked! Test interaction successful.');
+      });
+    </script>
+  </body>
 </html>
