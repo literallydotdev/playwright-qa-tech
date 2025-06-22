@@ -8,5 +8,4 @@ test('should find and click zoom in button on Google Maps iframe', async ({
 
   const mapFrame = page.frameLocator('iframe[src*="google.com/maps"]');
   await mapFrame.locator('button[aria-label="Zoom in"]').click();
-  // Since it's an embed, no assertion — mainly to test selector doesn't fail
 });

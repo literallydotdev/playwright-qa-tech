@@ -7,5 +7,4 @@ test('should interact with nested iframe button', async ({ page }) => {
   const frame = page.frameLocator('iframe[src="iframe-page.html"]');
 
   await frame.locator('button.submit').click();
-  // We could mock window.alert in a real app for assertions
 });
