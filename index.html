@@ -17,9 +17,84 @@
       <header class="header">
         <div class="header-content">
           <h1 class="title">Playwright vs AI Testing</h1>
-          <p class="subtitle">
-            Testing environment for modern web applications
-          </p>
+          <div class="subtitle">
+            <p>
+              Testing environment showcasing complex UI interactions including:
+            </p>
+            <ul>
+              <li>
+                <span class="li-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                    ></path>
+                  </svg>
+                </span>
+                <strong>Dynamic Sign-Up Form</strong> - Password validation,
+                email verification, real-time strength indicators, and
+                unpredictable submission states
+              </li>
+              <li>
+                <span class="li-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                    ></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <strong>Embedded Google Maps</strong> - Third-party iframe
+                integrations
+              </li>
+              <li>
+                <span class="li-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect
+                      x="3"
+                      y="3"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                  </svg>
+                </span>
+                <strong>Random Popup Interactions</strong> - Unpredictable modal
+                behavior
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
 
@@ -27,19 +102,111 @@
         <div class="test-grid">
           <section class="test-card">
             <div class="card-header">
-              <h2 class="card-title">Nested iframe Test</h2>
+              <h2 class="card-title">Dynamic Sign-Up Form</h2>
               <p class="card-description">
-                Test interactions within nested iframe elements
+                Test form validation, password strength, email verification, and
+                unpredictable submission states
               </p>
             </div>
             <div class="card-content">
-              <iframe
-                src="iframe-page.html"
-                width="100%"
-                height="200"
-                title="Nested iframe test environment"
-                class="test-iframe"
-              ></iframe>
+              <form class="signup-form" id="signupForm">
+                <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" required />
+                  <div class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required />
+                  <div class="error-message"></div>
+                  <div class="validation-status"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                  <div class="password-strength">
+                    <div class="strength-bar"></div>
+                    <div class="strength-text">Enter a password</div>
+                  </div>
+                  <div class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                  />
+                  <div class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      id="agreeTerms"
+                      name="agreeTerms"
+                      required
+                    />
+                    <span class="custom-checkbox"></span>
+                    I agree to the
+                    <a href="#" class="terms-link">Terms & Conditions</a>
+                  </label>
+                  <div class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="newsletter" name="newsletter" />
+                    <span class="custom-checkbox"></span>
+                    Subscribe to our newsletter for updates
+                  </label>
+                </div>
+
+                <button type="submit" class="submit-btn" disabled>
+                  <span class="btn-text">Create Account</span>
+                  <div class="loading-spinner" style="display: none"></div>
+                </button>
+              </form>
+
+              <!-- Success State -->
+              <div
+                class="success-state"
+                id="successState"
+                style="display: none"
+              >
+                <div class="success-icon">✅</div>
+                <h3>Account Created Successfully!</h3>
+                <p>
+                  Welcome! Your account has been created and you're ready to get
+                  started.
+                </p>
+                <button class="wizard-btn reset-btn">
+                  Create Another Account
+                </button>
+              </div>
+
+              <!-- Error State -->
+              <div class="error-state" id="errorState" style="display: none">
+                <div class="error-icon">❌</div>
+                <h3>Oops! Something went wrong</h3>
+                <p id="errorMessage">
+                  There was an issue creating your account. Please try again.
+                </p>
+                <div class="form-actions">
+                  <button class="wizard-btn retry-btn">Try Again</button>
+                  <button class="wizard-btn reset-btn">Start Over</button>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -70,8 +237,11 @@
 
       <footer class="footer">
         <p>
-          &copy; 2025 Playwright vs AI Testing. Built for professional testing
-          environments.
+          &copy; 2025 Playwright vs AI Testing. Powered by
+          <a href="https://qa.tech/" target="_blank" rel="noopener noreferrer"
+            >QA.tech</a
+          >
+          - Join the AI in QA Revolution
         </p>
       </footer>
     </div>
