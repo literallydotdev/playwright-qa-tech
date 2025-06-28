@@ -212,7 +212,7 @@ class SignUpForm {
 
     // Simulate API call with random delay and occasional "already exists" error
     setTimeout(() => {
-      const isAvailable = Math.random() > 0.25; // 75% chance email is available
+      const isAvailable = Math.random() > 0.3; // 70% chance email is available
 
       if (isAvailable) {
         statusElement.innerHTML =
